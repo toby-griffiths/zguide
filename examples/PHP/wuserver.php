@@ -10,7 +10,6 @@
 $context = new ZMQContext();
 $publisher = $context->getSocket(ZMQ::SOCKET_PUB);
 $publisher->bind("tcp://*:5556");
-$publisher->bind("ipc://weather.ipc");
 
 while (true) {
     //  Get values that will fool the boss
